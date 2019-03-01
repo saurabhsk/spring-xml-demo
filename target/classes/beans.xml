@@ -5,16 +5,35 @@
        xsi:schemaLocation = "http://www.springframework.org/schema/beans
    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
-    <bean id="act" class="com.stackroute.domain.Actor">
+    <bean name="act" class="com.stackroute.domain.Actor">
 
-        <property name="name" value="Salman"></property>
-        <property name="gender" value="M"></property>
-        <property name="age" value="53"></property>
+        <constructor-arg value="Salman"></constructor-arg>
+        <constructor-arg value="M"></constructor-arg>
+        <constructor-arg value="53"></constructor-arg>
+    </bean>
+
+    <bean id="acto" class="com.stackroute.domain.Actor">
+
+        <constructor-arg type="java.lang.String" value="Anil Kapoor"></constructor-arg>
+        <constructor-arg type="java.lang.String" value="M"></constructor-arg>
+        <constructor-arg type="int" value="55"></constructor-arg>
+    </bean>
+
+    <bean id="actor" class="com.stackroute.domain.Actor">
+
+        <constructor-arg index="0" value="RajKumarRao"></constructor-arg>
+        <constructor-arg index="1" value="M"></constructor-arg>
+        <constructor-arg index="2" value="33"></constructor-arg>
     </bean>
     
-    <bean id="movie" class="com.stackroute.domain.Movie">
+    <bean name="movieA,movieB" class="com.stackroute.domain.Movie" scope="prototype">
         
-        <property name="actor" ref="act"></property>
+        <constructor-arg ref="act"></constructor-arg>
+        <constructor-arg ref="acto"></constructor-arg>
+        <constructor-arg ref="actor"></constructor-arg>
+
     </bean>
+
+
 
 </beans>
