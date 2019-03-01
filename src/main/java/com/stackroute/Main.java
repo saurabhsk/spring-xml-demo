@@ -36,11 +36,7 @@ public class Main {
         System.out.println(movie);
 
 
-        Movie movie1 = (Movie) context.getBean("movieB");
-        if(movie.equals(movie1));{
-            System.out.println(movie==movie1);
-        }
-        Movie movie2 = (Movie) context.getBean("movieB");
+       Movie movie2 = (Movie) context.getBean("movieB");
         System.out.println(movie2);
     }
 }

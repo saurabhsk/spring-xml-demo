@@ -4,20 +4,23 @@ public class Movie {
 
     Actor actor1;
     Actor actor2;
-    Actor actor3;
 
-    public Movie(Actor actor1, Actor actor2, Actor actor3) {
+    public Movie(){}
+
+    public void setActor1(Actor actor1) {
         this.actor1 = actor1;
-        this.actor2 = actor2;
-        this.actor3 = actor3;
     }
+
+   public Movie(Actor actor2){
+        //this.actor1 = actor1;
+        this.actor2 = actor2;
+   }
 
     @Override
     public String toString() {
         return "Movie{" +
-                "actor1=" + actor1 +
-                ", actor2=" + actor2 +
-                ", actor3=" + actor3 +
+                "actor1=" + actor1+
+               "actor2=" + actor2+
                 '}';
     }
 }
