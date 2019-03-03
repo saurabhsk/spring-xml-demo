@@ -29,10 +29,8 @@
     <!--byName-->
     <bean name="movieA" class="com.stackroute.domain.Movie" autowire="byName"></bean>
 
-    <!--&lt;!&ndash;byType&ndash;&gt;-->
-    <bean name="movieB" class="com.stackroute.domain.Movie">
-          <constructor-arg ref="actor2"></constructor-arg>
-    </bean>
+    <bean name="BeanLifecycleDemoBean" class="com.stackroute.demo.BeanLifecycleDemoBean" init-method="customInit" destroy-method="customDestroy">
 
+    </bean>
 
 </beans>
