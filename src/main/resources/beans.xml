@@ -29,8 +29,6 @@
     <!--byName-->
     <bean name="movieA" class="com.stackroute.domain.Movie" autowire="byName"></bean>
 
-    <bean name="BeanLifecycleDemoBean" class="com.stackroute.demo.BeanLifecycleDemoBean" init-method="customInit" destroy-method="customDestroy">
-
-    </bean>
+    <bean class="com.stackroute.demo.BeanPostProcessorDemoBean"></bean>
 
 </beans>
