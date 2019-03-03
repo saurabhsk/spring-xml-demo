@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 //Task 2: From the master branch of spring-xml-demo repo create a constructor-injectionbranch.
 // Add constructor to the Actor class to initialize with name and gender, and ageCreate three beans of
 // type Actor in the bean definition file.  Use constructor-based injection in the bean definition file
@@ -13,6 +14,15 @@
 //From the autowire-xml branch of spring-xml-demo repo create an aware-interfacebranch.
 // Implement ApplicationContextAware, BeanFactoryAware, BeanNameAware in theMovie class and print out
 // their results.
+=======
+
+//Task 3: From the constructor-injection branch of spring-xml-demo repo create a autowire-xml branch.
+// For the Movie bean, delete the constructor based object injection in the bean definition file
+// (beans.xml) that injects an Actor bean. Use autowire byName in the Movie bean to inject an Actor
+// bean. Run the application. Create another Movie bean and try autowire byType. Run the application
+// and note the exception thrown. Fix the Movie bean by removing autowire byType and using constructor
+// injection instead
+>>>>>>> cef0ef82f952b7435fed0ed470b91d1564696c04
 package com.stackroute;
 
 import com.stackroute.domain.Actor;
